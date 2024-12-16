@@ -221,7 +221,6 @@ def main(path):
   
   def compute_metrics(p):
       preds = np.argmax(p.predictions, axis=1)
-      print('5555555   ',preds.shape,sum(preds))
       labels = p.label_ids
       accuracy = accuracy_score(labels, preds)
       with open("e.txt", "a") as f:
